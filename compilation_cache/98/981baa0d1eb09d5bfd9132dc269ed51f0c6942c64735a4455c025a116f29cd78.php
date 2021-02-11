@@ -33,6 +33,13 @@ class __TwigTemplate_08dc666acb2c2dec5bb005af641ad86179b72dbae60cfe4b11ca7549fde
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
+        // line 1
+        echo "<h1>User Profile</h1>
+<p>Hello, ";
+        // line 2
+        echo twig_escape_filter($this->env, ($context["name"] ?? null), "html", null, true);
+        echo "</p>
+";
     }
 
     public function getTemplateName()
@@ -40,13 +47,20 @@ class __TwigTemplate_08dc666acb2c2dec5bb005af641ad86179b72dbae60cfe4b11ca7549fde
         return "index.html";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array ();
+        return array (  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "index.html", "C:\\Users\\edupo\\apps\\twig\\templates\\index.html");
+        return new Source("<h1>User Profile</h1>
+<p>Hello, {{ name }}</p>
+", "index.html", "C:\\Users\\edupo\\apps\\twig\\templates\\index.html");
     }
 }

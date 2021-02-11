@@ -12,4 +12,4 @@ $twig = new \Twig\Environment($loader, [
     'debug' => true,
 ]);
 
-echo $twig->display('index.html', ['name' => 'Fabien']);
+echo $twig->render('index.html', ['name' => 'Fabien']);
